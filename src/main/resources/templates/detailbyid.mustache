@@ -1,0 +1,17 @@
+{{>layouts/header}}
+{{>layouts/sideBar}}
+{{#Entity}}
+
+    <div class="detailCss">
+<h1>{{title}}</h1>
+        <hr>
+<h3>{{content}}</h3>
+    </div>
+
+<a href="/detail/{{id}}/edit"  class="btn btn-primary">Edit</a>
+<a href="/detail/{{id}}/delete"  class="btn btn-danger">Delete</a>
+{{/Entity}}
+<a href="/" class="btn btn-danger">back</a>
+
+{{>comments/_comments}}
+{{>layouts/footer}}

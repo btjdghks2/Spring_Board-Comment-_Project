@@ -1,0 +1,21 @@
+{{>layouts/header}}
+{{>layouts/sideBar}}
+
+<table class="table table-striped" style="width: 30%">
+    <thead>
+    <tr>
+        <th scope="col" style="Width: 30%">ID</th>
+        <th scope="col" style="Width: 30%">title</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#EntityList}}
+    <tr>
+        <th scope="row"  style="Width: 30%">{{id}}</th>
+        <th style="Width: 30%"><a href="/detail/{{id}}">{{title}}</a></th>
+    </tr>
+    {{/EntityList}}
+    </tbody>
+</table>
+
+{{>layouts/footer}}
