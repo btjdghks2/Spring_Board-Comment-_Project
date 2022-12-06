@@ -19,7 +19,7 @@ class CommentRepositoryTest {
     @Autowired
     CommentRepository commentRepository;
 
-
+// 댓글 테스트
     @Test
     void findByPageentityId() {
 
