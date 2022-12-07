@@ -1,0 +1,26 @@
+version: "3"
+services:
+  postgresdb:
+    image: postgres:latest
+    container_name: postgresdb
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=pageproject_db
+    restart: unless-stopped
+
+# APP*****************************************
+  springbootapp:
+    image: testapp:latest
+    container_name: springbootapp
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+#    depends_on:
+#      - postgresdb
+#    links:
+#      - postgresdb
+#  volumes:
+#  postgres-data:
